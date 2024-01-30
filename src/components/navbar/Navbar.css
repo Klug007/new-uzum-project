@@ -176,6 +176,11 @@
         gap: 2px;
         font-size: 13px;
     }
+
+    .navbar__bottom {
+        width: calc(100% - 40px);
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 600px) {
