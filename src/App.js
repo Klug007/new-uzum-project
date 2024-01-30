@@ -6,6 +6,7 @@ import Home from "./router/home/Home";
 import Cart from "./router/cart/Cart";
 import Login from "./router/login/Login";
 import Wishes from "./router/wishes/Wishes";
+import Footer from "./components/footer/Footer";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/wishes" element={<Wishes />} />
                 <Route path="*" element={<h1>Nothing can be found</h1>} />
             </Routes>
+            <Footer />
         </div>
     );
 }

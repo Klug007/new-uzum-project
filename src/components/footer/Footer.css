@@ -1,0 +1,138 @@
+.footer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.footer__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__item>p {
+    color: grey;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footer__item h1 {
+    font-size: 16px;
+}
+
+.footer__icons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.icon svg {
+    font-size: 20px;
+}
+
+.grid {
+    display: flex;
+    gap: 5px;
+}
+
+.grid svg {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.footer__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #e2dddd;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.footer__bottom p {
+    font-weight: 600;
+}
+
+.footer__bottom h5 {
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.row {
+    flex-direction: row;
+    display: flex;
+    gap: 25px;
+}
+
+@media screen and (max-width: 990px) {
+    .footer {
+        gap: 0;
+        margin-bottom: 50px;
+    }
+
+    .footer__top {
+        display: block;
+        gap: 10px;
+    }
+
+    .footer__item {
+        border-top: 1px solid #e2dddd;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .footer__item:last-child,
+    .footer__item:first-child {
+        border: none;
+    }
+
+    .footer__icons {
+        flex-direction: column;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-end: span;
+        place-items: center;
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    .grid svg {
+        font-size: 25px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        border: none;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
