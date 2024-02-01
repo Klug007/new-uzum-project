@@ -36,11 +36,11 @@ function Footer() {
                     <div>
                         <h1>Скачать приложение</h1>
                         <div className="footer__icons">
-                            <div className="icon">
+                            <div className="footer__icon">
                                 <FaAppleAlt />
                                 <p>AppleStore</p>
                             </div>
-                            <div className="icon">
+                            <div className="footer__icon">
                                 <FaGooglePlay />
                                 <p>Google Play</p>
                             </div>

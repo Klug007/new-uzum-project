@@ -42,7 +42,7 @@
     align-items: center;
 }
 
-.icon {
+.footer__icon {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,7 +50,7 @@
     font-size: 14px;
 }
 
-.icon svg {
+.footer__icon svg {
     font-size: 20px;
 }
 
