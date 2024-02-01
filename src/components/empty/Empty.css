@@ -1,0 +1,35 @@
+.empty {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 75px auto;
+    gap: 20px;
+    text-align: center;
+}
+
+.empty h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+.empty p {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.empty__image img {
+    height: 128px;
+    object-fit: cover;
+}
+
+.empty button {
+    background-color: var(--bg-py);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
