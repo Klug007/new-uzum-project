@@ -7,13 +7,15 @@ import Cart from "./router/cart/Cart";
 import Login from "./router/login/Login";
 import Wishes from "./router/wishes/Wishes";
 import Footer from "./components/footer/Footer";
+import { PRODUCTS } from "./static";
+import "number-brm";
 
 function App() {
     return (
         <div className="app">
             <NavbarMain />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home data={PRODUCTS} />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/wishes" element={<Wishes />} />

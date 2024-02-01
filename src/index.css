@@ -26,3 +26,8 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
+hr {
+  border-top: none;
+  border-bottom: 1px solid #ccc;
+}
