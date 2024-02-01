@@ -19,6 +19,12 @@
     gap: 20px;
 }
 
+.footer__item > div {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
 .footer__item>p {
     color: grey;
     cursor: pointer;
