@@ -48,7 +48,7 @@ function Footer() {
                     </div>
                     <div>
                         <h1>Uzum в соцсетях</h1>
-                        <div className="grid">
+                        <div className="footer__grid">
                             <FaYoutube />
                             <FaFacebook />
                             <FaDiscord />

@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .footer__item {
@@ -55,12 +54,12 @@
     font-size: 20px;
 }
 
-.grid {
+.footer__grid {
     display: flex;
     gap: 5px;
 }
 
-.grid svg {
+.footer__grid svg {
     font-size: 25px;
     cursor: pointer;
 }
@@ -117,7 +116,7 @@
         flex-direction: column;
     }
 
-    .grid {
+    .footer__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-end: span;
@@ -126,7 +125,7 @@
         margin: 0 auto;
     }
 
-    .grid svg {
+    .footer__grid svg {
         font-size: 25px;
     }
 
