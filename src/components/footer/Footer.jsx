@@ -58,7 +58,7 @@ function Footer() {
                 </div>
             </div>
             <div className="footer__bottom">
-                <div className="row">
+                <div className="footer__bottom-info">
                     <p>Соглашение o конфиденциальности</p>
                     <p>Пользовательское соглашение</p>
                 </div>

@@ -19,7 +19,7 @@
     gap: 20px;
 }
 
-.footer__item > div {
+.footer__item>div {
     display: flex;
     gap: 15px;
     flex-direction: column;
@@ -85,7 +85,7 @@
     font-weight: 600;
 }
 
-.row {
+.footer__bottom-info {
     flex-direction: row;
     display: flex;
     gap: 25px;
@@ -137,7 +137,7 @@
         text-align: center;
     }
 
-    .row {
+    .footer__bottom-info {
         flex-direction: column;
         gap: 15px;
     }
