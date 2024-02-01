@@ -8,25 +8,29 @@ import {
     FaYoutube,
     FaFacebook,
 } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 function Footer() {
-    return (
+    const { pathname } = useLocation();
+    return pathname.includes("login") ? (
+        <></>
+    ) : (
         <div className="footer container">
             <div className="footer__top">
                 <div className="footer__item">
-                    <h1>O нас</h1>
-                    <p>Пункты выдачи</p>
-                    <p>Вакансии</p>
+                    <h1>Biz haqimizda</h1>
+                    <p>Topshirish punktlari</p>
+                    <p>Vakansiyalar</p>
                 </div>
                 <div className="footer__item">
-                    <h1>Пользователям</h1>
-                    <p>Пункты выдачи</p>
-                    <p>Вопрос - Ответ</p>
+                    <h1>Foydalanuvchilarga</h1>
+                    <p>Biz bilan bog'lanish</p>
+                    <p>Savol - Javob</p>
                 </div>
                 <div className="footer__item">
-                    <h1>Для предпринимателей</h1>
-                    <p>Пункты выдачи</p>
-                    <p>Вход для продавцов</p>
+                    <h1>Tadbirkorlarga</h1>
+                    <p>Uzumda soting</p>
+                    <p>Sotuvchi kabinetiga kirish</p>
                 </div>
                 <div className="footer__item">
                     <div>
