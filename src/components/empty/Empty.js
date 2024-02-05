@@ -1,17 +1,17 @@
 import React from "react";
 import "./Empty.css";
+import { Link } from "react-router-dom";
 
-function Empty({ data }) {
-    console.log(data);
+function Empty({ data: { image, heading, text, link, btn } }) {
     return (
-        <div className="empty container">
+        <div className="empty">
             <div className="empty__image">
-                <img src={data.image} alt="" />
+                <img src={image} alt="" />
             </div>
-            <h1>{data.heading}</h1>
-            <p>{data.text}</p>
+            <h1>{heading}</h1>
+            <p>{text}</p>
             <button>
-                <a href={data.link}>{data.btn}</a>
+                <Link to={link}>{btn}</Link>
             </button>
         </div>
     );

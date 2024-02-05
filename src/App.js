@@ -7,6 +7,7 @@ import Cart from "./router/cart/Cart";
 import Login from "./router/login/Login";
 import Wishes from "./router/wishes/Wishes";
 import Footer from "./components/footer/Footer";
+import Singlepage from "./router/singlepage/Singlepage";
 import { PRODUCTS } from "./static";
 import "number-brm";
 
@@ -16,6 +17,7 @@ function App() {
             <NavbarMain />
             <Routes>
                 <Route path="/" element={<Home data={PRODUCTS} />} />
+                <Route path="/product/:id" element={<Singlepage />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/wishes" element={<Wishes />} />

@@ -6,7 +6,7 @@ function Home({ data }) {
     return (
         <div>
             <Banner />
-            <Products data={data} />
+            <Products title="Arzon narxlar" data={data} />
         </div>
     );
 }
