@@ -167,6 +167,10 @@
     margin-top: 15px;
 }
 
+.singlepage__button button {
+    cursor: pointer;
+}
+
 .singlepage__button button:nth-child(1) {
     border: none;
     height: 50px;
