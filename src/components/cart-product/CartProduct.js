@@ -8,14 +8,24 @@ import { FaRegTrashAlt } from "react-icons/fa";
 function CartProduct({ carts }) {
     const dispatch = useDispatch();
 
+    console.log(carts);
+
+    const SumOfProducts = () => {
+        let sum;
+        carts?.map((el) => {
+            sum =+ el.price * el.quantity;
+        });
+        return sum;
+    };
+
     return (
-        <div className="container">
+        <div className="container h-70">
             <div className="cart__wrapper">
                 <div className="cart__products">
                     {carts?.map((el) => (
                         <div key={el.title} className="cart__item">
                             <Link
-                                to={`/product/${el.id}`}
+                                to={`/product/${el._id}`}
                                 className="cart__item-left"
                             >
                                 <img src={el.url} alt={el.title} />
@@ -27,6 +37,7 @@ function CartProduct({ carts }) {
                             <div className="cart__item-right">
                                 <div className="cart__item-btns">
                                     <button
+                                        disabled={el.quantity === 1}
                                         onClick={() => dispatch(deCart(el))}
                                     >
                                         -
@@ -72,10 +83,9 @@ function CartProduct({ carts }) {
                             />
                             <div className="total">
                                 <p>Umumiy narx:</p>
-                                <b> so'm</b>
+                                <b>{SumOfProducts().brm()} so'm</b>
                             </div>
                             <button className="btn-reg">
-                                {" "}
                                 Rasmiylashtirishga o'tish
                             </button>
                         </form>

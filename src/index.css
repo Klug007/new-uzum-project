@@ -32,3 +32,7 @@ hr {
   border-top: none;
   border-bottom: 1px solid #ccc;
 }
+
+.h-70 {
+  min-height: 70vh;
+}

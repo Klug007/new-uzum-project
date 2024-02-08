@@ -18,7 +18,7 @@ function Wishes() {
     }, []);
 
     return (
-        <div className="wishes">
+        <div className="wishes h-70">
             {wishes.length ? (
                 <Products title="Sevimlilar" data={wishes} />
             ) : (
