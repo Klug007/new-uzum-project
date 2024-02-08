@@ -6,6 +6,23 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToWishes, removeFromWishes } from "../../context/wishesSlice";
 import { incCart } from "../../context/cartSlice";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const CustomToast = ({ title, image }) => (
+    <div className="custom-toast">
+        <div className="toast-image">
+            <img src={image} alt="" />
+        </div>
+        <div className="toast-item">
+            <h4>Mahsulot savatga qo'shildi</h4>
+            <p>{title}</p>
+        </div>
+        <Link to={"./cart"} className="toast-link">
+            <button>Savat o'chish</button>
+        </Link>
+    </div>
+);
 
 function Products({ data, title }) {
     const dispatch = useDispatch();
@@ -21,9 +38,24 @@ function Products({ data, title }) {
         }
     };
 
-    const handleCartClick = (event) => {
+    const handleCartClick = (event, el) => {
         event.preventDefault();
         event.stopPropagation();
+        dispatch(incCart(el));
+        toast.success(<CustomToast title={el.title} image={el.url[0]} />, {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            progress: undefined,
+            style: {
+                height: "100px",
+                width: "600px",
+                left: "-150px",
+            },
+        });
     };
 
     return (
@@ -47,7 +79,7 @@ function Products({ data, title }) {
                                         handleHeartClick(event, el)
                                     }
                                 >
-                                    <FaHeart />
+                                    <FaHeart style={{ color: "#7000ff" }} />
                                 </div>
                             ) : (
                                 <div
@@ -71,8 +103,7 @@ function Products({ data, title }) {
                                 <div
                                     className="card__cart"
                                     onClick={(event) => {
-                                        handleCartClick(event);
-                                        dispatch(incCart(el));
+                                        handleCartClick(event, el);
                                     }}
                                 >
                                     <IoCartOutline />
@@ -82,6 +113,7 @@ function Products({ data, title }) {
                     </Link>
                 ))}
             </div>
+            <ToastContainer icon={false} />
         </div>
     );
 }

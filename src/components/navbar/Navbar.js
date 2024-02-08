@@ -4,6 +4,7 @@ import { IoMenu, IoSearch, IoHomeOutline } from "react-icons/io5";
 import { FaRegUser, FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 function Navbar() {
     return (
@@ -11,7 +12,8 @@ function Navbar() {
             <div className="navbar">
                 <NavLink to={"/"} className="navbar__logo">
                     {/* <img src="" alt="" /> */}
-                    <h2>uzum market</h2>
+                    {/* <h2>uzum market</h2> */}
+                    <Logo />
                 </NavLink>
                 <button className="navbar__category-btn">
                     <IoMenu />

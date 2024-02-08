@@ -104,6 +104,10 @@
     font-size: 18px;
 }
 
+.card__cart:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (max-width:600px) {
     .card {
         width: calc(50% - 6px);
@@ -131,4 +135,51 @@
     .card__image {
         height: 180px;
     }
+}
+
+/* Custom toast */
+
+.custom-toast {
+    padding: 15px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.toast-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #000;
+}
+
+.toast-item p {
+    font-size: 14px;
+    color: gray;
+}
+
+.toast-image img {
+    height: 80px;
+}
+
+.toast-link {
+    display: flex;
+    justify-content: start;
+    align-self: center;
+}
+
+.toast-link button {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #7000ff;
+    white-space: nowrap;
+}
+
+.Toastify__toast-body {
+    margin: 0 !important;
+    padding: 0 !important;
 }
