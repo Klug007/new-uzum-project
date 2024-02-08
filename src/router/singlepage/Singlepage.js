@@ -10,6 +10,10 @@ function Singlepage() {
     let paramId = useParams().id;
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [paramId]);
+
+    useEffect(() => {
         var singleItem = PRODUCTS.find((product) => product._id === paramId);
         setProduct(singleItem);
     }, [paramId]);

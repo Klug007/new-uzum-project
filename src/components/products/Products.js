@@ -4,6 +4,7 @@ import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { addToWishes, removeFromWishes } from "../../context/wishesSlice";
+import { incCart } from "../../context/cartSlice";
 import { Link } from "react-router-dom";
 
 function Products({ data, title }) {
@@ -69,7 +70,10 @@ function Products({ data, title }) {
                                 </div>
                                 <div
                                     className="card__cart"
-                                    onClick={(event) => handleCartClick(event)}
+                                    onClick={(event) => {
+                                        handleCartClick(event);
+                                        dispatch(incCart(el));
+                                    }}
                                 >
                                     <IoCartOutline />
                                 </div>

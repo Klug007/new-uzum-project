@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Empty from "../../components/empty/Empty";
 import { useSelector } from "react-redux";
 import Products from "../../components/products/Products";
@@ -12,11 +12,15 @@ function Wishes() {
         link: "/login",
     };
     let wishes = useSelector((state) => state.wishes.value);
-    console.log(wishes);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="wishes">
             {wishes.length ? (
-                <Products title='Sevimlilar' data={wishes} />
+                <Products title="Sevimlilar" data={wishes} />
             ) : (
                 <Empty data={empty} />
             )}
