@@ -88,7 +88,7 @@
     font-size: 20px;
     padding: 9px;
     cursor: pointer;
-    z-index: 50;
+    z-index: 10;
 }
 
 .card__cart {

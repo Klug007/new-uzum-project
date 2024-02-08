@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Empty from "../../components/empty/Empty";
 import { useDispatch, useSelector } from "react-redux";
 import { incCart, deCart } from "../../context/cartSlice";
+import CartProduct from "../../components/cart-product/CartProduct";
 
 function Cart() {
     const empty = {
@@ -22,21 +23,7 @@ function Cart() {
     return (
         <>
             {carts.length ? (
-                <div className="container">
-                    {carts?.map((el) => (
-                        <div key={el._id}>
-                            <img src={el.url[0]} width={80} alt="" />
-                            <p>{el.title}</p>
-                            <button onClick={() => dispatch(deCart(el))}>
-                                -
-                            </button>
-                            <button>{el.quantity}</button>
-                            <button onClick={() => dispatch(incCart(el))}>
-                                +
-                            </button>
-                        </div>
-                    ))}
-                </div>
+                <CartProduct carts={carts} />
             ) : (
                 <Empty data={empty} />
             )}

@@ -8,40 +8,43 @@ import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 function Navbar() {
     return (
-        <div className="container">
-            <div className="navbar">
-                <NavLink to={"/"} className="navbar__logo">
-                    {/* <img src="" alt="" /> */}
-                    {/* <h2>uzum market</h2> */}
-                    <Logo />
-                </NavLink>
-                <button className="navbar__category-btn">
-                    <IoMenu />
-                    <span>Katalog</span>
-                </button>
-                <div className="navbar__search">
-                    <input type="text" placeholder="Hidirish..." />
-                    <button>
-                        <IoSearch />
+        <div className="navbar__wrapper">
+            <div className="container">
+                <div className="navbar">
+                    <NavLink to={"/"} className="navbar__logo">
+                        {/* <img src="" alt="" /> */}
+                        {/* <h2>uzum market</h2> */}
+                        <Logo />
+                    </NavLink>
+                    <button className="navbar__category-btn">
+                        <IoMenu />
+                        <span>Katalog</span>
                     </button>
-                </div>
-                <div className="navbar__collection">
-                    <NavLink to={"/"} className="navbar__item">
-                        <IoHomeOutline />
-                        <span>Bosh sahifa</span>
-                    </NavLink>
-                    <NavLink to={"/login"} className="navbar__item">
-                        <FaRegUser />
-                        <span>Kirish</span>
-                    </NavLink>
-                    <NavLink to={"/wishes"} className="navbar__item">
-                        <FaRegHeart />
-                        <span>Saralangan</span>
-                    </NavLink>
-                    <NavLink to={"/cart"} className="navbar__item">
-                        <IoCartOutline />
-                        <span>Savatcha</span>
-                    </NavLink>
+                    <div className="navbar__search">
+                        <input type="text" placeholder="Hidirish..." />
+                        <button>
+                            <IoSearch />
+                        </button>
+                    </div>
+                    <div className="navbar__collection">
+                        <NavLink to={"/"} className="navbar__item">
+                            <IoHomeOutline />
+                            <span>Bosh sahifa</span>
+                        </NavLink>
+                        <NavLink to={"/login"} className="navbar__item">
+                            <FaRegUser />
+                            <span>Kirish</span>
+                        </NavLink>
+                        <NavLink to={"/wishes"} className="navbar__item">
+                            <FaRegHeart />
+                            <span>Saralangan</span>
+                        </NavLink>
+                        <NavLink to={"/cart"} className="navbar__item">
+                            <IoCartOutline />
+                            
+                            <span>Savatcha</span>
+                        </NavLink>
+                    </div>
                 </div>
             </div>
         </div>
