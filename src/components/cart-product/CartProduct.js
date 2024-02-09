@@ -24,7 +24,7 @@ function CartProduct({ carts }) {
         var location = document.getElementById("location").value;
         var message = document.getElementById("message").value;
 
-        var my_text = `<b>Name</b>: <i>${name}</i> %0A <b>Phone Number</b>: <i>${phone_number}</i> %0A <b>Location</b>: <i>${location}</i> %0A <b>Message</b>: <i>${message}</i>`;
+        var my_text = `<b>Исм</b>: <i>${name}</i> %0A <b>Телефон Номер</b>: <i>${phone_number}</i> %0A <b>Адресс</b>: <i>${location}</i> %0A <b>Сообщение</b>: <i>${message}</i>`;
 
         var token = "6844770680:AAHJxjHu9JzEH9UjSCKqhAbM5ixhm6v2tes";
         var chat_id = -4140340215;
