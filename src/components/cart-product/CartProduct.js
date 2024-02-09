@@ -8,14 +8,38 @@ import { FaRegTrashAlt } from "react-icons/fa";
 function CartProduct({ carts }) {
     const dispatch = useDispatch();
 
-    console.log(carts);
-
     const SumOfProducts = () => {
-        let sum;
+        let sum = 0;
         carts?.map((el) => {
-            sum =+ el.price * el.quantity;
+            sum = +el.price * el.quantity;
         });
         return sum;
+    };
+
+    const SendMessage = (e) => {
+        e.preventDefault();
+
+        var name = document.getElementById("name").value;
+        var phone_number = document.getElementById("phone_number").value;
+        var location = document.getElementById("location").value;
+        var message = document.getElementById("message").value;
+
+        var my_text = `<b>Name</b>: <i>${name}</i> %0A <b>Phone Number</b>: <i>${phone_number}</i> %0A <b>Location</b>: <i>${location}</i> %0A <b>Message</b>: <i>${message}</i>`;
+
+        var token = "6844770680:AAHJxjHu9JzEH9UjSCKqhAbM5ixhm6v2tes";
+        var chat_id = -4140340215;
+
+        var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}&parse_mode=html`;
+
+        let api = new XMLHttpRequest();
+        api.open("GET", url, true);
+        api.send();
+
+        console.log("Message sent successfully");
+        document.getElementById("name").value = "";
+        document.getElementById("phone_number").value = "";
+        document.getElementById("location").value = "";
+        document.getElementById("message").value = "";
     };
 
     return (
@@ -69,23 +93,33 @@ function CartProduct({ carts }) {
                 <div className="cart__register">
                     <div className="input__reg">
                         <h3>Ma'lumotlarni to'ldiring:</h3>
-                        <form action="">
-                            <input type="text" placeholder="To'liq ismingiz" />
+                        <form action="" onSubmit={(e) => SendMessage(e)}>
+                            <input
+                                type="text"
+                                placeholder="To'liq ismingiz"
+                                id="name"
+                            />
                             <input
                                 type="text"
                                 placeholder="+998 00-000-00-00"
+                                id="phone_number"
                             />
-                            <input type="text" placeholder="Manzilingiz" />
+                            <input
+                                type="text"
+                                placeholder="Manzilingiz"
+                                id="location"
+                            />
                             <input
                                 required
                                 type="text"
                                 placeholder="Habar yo'llash"
+                                id="message"
                             />
                             <div className="total">
                                 <p>Umumiy narx:</p>
                                 <b>{SumOfProducts().brm()} so'm</b>
                             </div>
-                            <button className="btn-reg">
+                            <button type="submit" className="btn-reg">
                                 Rasmiylashtirishga o'tish
                             </button>
                         </form>

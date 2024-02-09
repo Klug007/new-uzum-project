@@ -93,7 +93,9 @@ function Products({ data, title }) {
                             )}
                         </div>
                         <div className="card__body">
-                            <h3 className="card__title">{el.title}</h3>
+                            <h3 title={el.title} className="card__title">
+                                {el.title}
+                            </h3>
                             <mark>{((el.price * 1.5) / 12).brm()} so'm</mark>
                             <div className="card__prices">
                                 <div className="card__price-item">

@@ -16,7 +16,6 @@ function Cart() {
 
     const dispatch = useDispatch();
 
-    console.log(carts);
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
