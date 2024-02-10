@@ -168,6 +168,7 @@
     display: flex;
     justify-content: start;
     align-self: center;
+    cursor: pointer;
 }
 
 .toast-link button {

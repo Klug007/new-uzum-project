@@ -5,10 +5,14 @@ import heart from "../../assets/heart.png";
 import { useParams } from "react-router-dom";
 import { PRODUCTS } from "../../static/index";
 import Products from "../../components/products/Products";
+import { useDispatch } from "react-redux";
+import { incCart } from "../../context/cartSlice";
 
 function Singlepage() {
     const [product, setProduct] = useState([]);
     let paramId = useParams().id;
+
+    const dispatch = useDispatch();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -88,7 +92,9 @@ function Singlepage() {
                     </div>
 
                     <div className="singlepage__button">
-                        <button>Добавить в корзину</button>
+                        <button onClick={() => dispatch(incCart(product))}>
+                            Добавить в корзину
+                        </button>
                         <button>Купить в 1 клик</button>
                     </div>
 

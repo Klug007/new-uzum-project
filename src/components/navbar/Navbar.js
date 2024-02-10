@@ -5,15 +5,16 @@ import { FaRegUser, FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { useSelector } from "react-redux";
 
 function Navbar() {
+    let carts = useSelector((state) => state.carts.value);
+
     return (
         <div className="navbar__wrapper">
             <div className="container">
                 <div className="navbar">
                     <NavLink to={"/"} className="navbar__logo">
-                        {/* <img src="" alt="" /> */}
-                        {/* <h2>uzum market</h2> */}
                         <Logo />
                     </NavLink>
                     <button className="navbar__category-btn">
@@ -21,7 +22,7 @@ function Navbar() {
                         <span>Katalog</span>
                     </button>
                     <div className="navbar__search">
-                        <input type="text" placeholder="Hidirish..." />
+                        <input type="text" placeholder="Qidirish..." />
                         <button>
                             <IoSearch />
                         </button>
@@ -41,8 +42,9 @@ function Navbar() {
                         </NavLink>
                         <NavLink to={"/cart"} className="navbar__item">
                             <IoCartOutline />
-                            
-                            <span>Savatcha</span>
+                            <span>
+                                Savatcha <sup>{carts.length}</sup>
+                            </span>
                         </NavLink>
                     </div>
                 </div>

@@ -36,12 +36,14 @@
 }
 
 .login__form input {
-    background-color: #dedede;
+    background-color: rgba(199, 193, 193, 0.1);
     border: 1px solid gray;
     border-radius: 6px;
+    font-size: 15px;
     height: 30px;
     outline: none;
     text-indent: 10px;
+    padding: 20px 0;
 }
 
 .login__form button {
@@ -59,5 +61,5 @@
     text-align: center;
     text-decoration: underline;
     color: blue;
-    margin-top: 30px; 
+    margin-top: 30px;
 }

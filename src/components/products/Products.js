@@ -9,20 +9,30 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const CustomToast = ({ title, image }) => (
-    <div className="custom-toast">
-        <div className="toast-image">
-            <img src={image} alt="" />
+const CustomToast = ({ title, image }) =>
+    window.screen.width > 645 ? (
+        <div className="custom-toast">
+            <div className="toast-image">
+                <img src={image} alt="" />
+            </div>
+            <div className="toast-item">
+                <h4>Mahsulot savatga qo'shildi</h4>
+                <p>{title}</p>
+            </div>
+            <Link to={"./cart"} className="toast-link">
+                <button>Savatga o'tish</button>
+            </Link>
         </div>
-        <div className="toast-item">
-            <h4>Mahsulot savatga qo'shildi</h4>
-            <p>{title}</p>
+    ) : (
+        <div className="custom-toast">
+            <div className="toast-item">
+                <h4>Mahsulot savatga qo'shildi</h4>
+            </div>
+            <Link to={"./cart"} className="toast-link">
+                <button>Savatga o'tish</button>
+            </Link>
         </div>
-        <Link to={"./cart"} className="toast-link">
-            <button>Savat o'chish</button>
-        </Link>
-    </div>
-);
+    );
 
 function Products({ data, title }) {
     const dispatch = useDispatch();
@@ -50,11 +60,16 @@ function Products({ data, title }) {
             pauseOnHover: true,
             draggable: false,
             progress: undefined,
-            style: {
-                height: "100px",
-                width: "600px",
-                left: "-150px",
-            },
+            style:
+                window.screen.width > 645
+                    ? {
+                          height: "100px",
+                          width: "600px",
+                          left: "-150px",
+                      }
+                    : {
+                          height: "100px",
+                      },
         });
     };
 
