@@ -14,7 +14,7 @@ import "number-brm";
 function App() {
     return (
         <div className="app">
-            <NavbarMain />
+            <NavbarMain data={PRODUCTS} />
             <Routes>
                 <Route path="/" element={<Home data={PRODUCTS} />} />
                 <Route path="/product/:id" element={<Singlepage />} />

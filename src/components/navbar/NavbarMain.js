@@ -4,12 +4,14 @@ import Navbar from "./Navbar";
 import NavbarBottom from "./NavbarBottom";
 import { useLocation } from "react-router-dom";
 
-function NavbarMain() {
+function NavbarMain({ data }) {
     const { pathname } = useLocation();
-    return pathname.includes('login') ? <></> :(
+    return pathname.includes("login") ? (
+        <></>
+    ) : (
         <>
             <SubHeader />
-            <Navbar />
+            <Navbar data={data} />
             <NavbarBottom />
         </>
     );
