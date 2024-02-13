@@ -1,32 +1,6 @@
 import React, { useState, memo, useRef } from "react";
 
 function CartForm({ data }) {
-    // const SendMessage = (e) => {
-    //     e.preventDefault();
-
-    //     var name = document.getElementById("name").value;
-    //     var phone_number = document.getElementById("phone_number").value;
-    //     var location = document.getElementById("location").value;
-    //     var message = document.getElementById("message").value;
-
-    //     var my_text = `<b>Исм</b>: <i>${name}</i> %0A <b>Телефон Номер</b>: <i>${phone_number}</i> %0A <b>Адресс</b>: <i>${location}</i> %0A <b>Сообщение</b>: <i>${message}</i>`;
-
-    //     var token = "6844770680:AAHJxjHu9JzEH9UjSCKqhAbM5ixhm6v2tes";
-    //     var chat_id = -4140340215;
-
-    //     var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}&parse_mode=html`;
-
-    //     let api = new XMLHttpRequest();
-    //     api.open("GET", url, true);
-    //     api.send();
-
-    //     console.log("Message sent successfully");
-    //     document.getElementById("name").value = "";
-    //     document.getElementById("phone_number").value = "";
-    //     document.getElementById("location").value = "";
-    //     document.getElementById("message").value = "";
-    // };
-
     const tel = useRef();
     const address = useRef();
     const message = useRef();
@@ -39,9 +13,7 @@ function CartForm({ data }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // var my_text = `<b>Исм</b>: <i>${fullName}</i> %0A <b>Телефон Номер</b>: <i>${address}</i> %0A <b>Адресс</b>: <i>${address}</i> %0A <b>Сообщение</b>: <i>${message}</i>`;
-
-        let text = "Buyurtma %0A%0A";
+        let text = "Buyurtma %0A%0A ";
 
         text += `Ism: ${fullName} %0A`;
         text += `Telefon: ${tel.current.value} %0A`;

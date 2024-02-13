@@ -10,6 +10,8 @@ import Footer from "./components/footer/Footer";
 import Singlepage from "./router/singlepage/Singlepage";
 import { PRODUCTS } from "./static";
 import "number-brm";
+import Admin from "./router/admin/Admin";
+import Auth from "./router/auth/Auth";
 
 function App() {
     return (
@@ -21,6 +23,9 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/wishes" element={<Wishes />} />
+                <Route path="/" element={<Auth />}>
+                    <Route path="/admin/*" element={<Admin />} />
+                </Route>
                 <Route path="*" element={<h1>Nothing can be found</h1>} />
             </Routes>
             <Footer />

@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 
 function NavbarMain({ data }) {
     const { pathname } = useLocation();
-    return pathname.includes("login") ? (
+    return pathname.includes("login") || pathname.includes("admin") ? (
         <></>
     ) : (
         <>

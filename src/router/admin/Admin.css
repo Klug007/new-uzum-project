@@ -1,0 +1,37 @@
+.admin {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.admin__sidebar {
+    height: 100vh;
+    background-color: var(--bg-py);
+    padding: 20px;
+    color: #fff;
+}
+
+.admin__content {
+    padding: 20px;
+}
+
+.admin__link {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff3;
+}
+
+.admin__link.active {
+    background-color: #fff9;
+}
+
+.admin__go-home {
+    background-color: #fff9;
+    border: none;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
